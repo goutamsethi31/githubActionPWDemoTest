@@ -7,4 +7,6 @@ test("GitHub Action Test",async({page})=>{
 
     const productTitle= await page.locator(".product-title").first().textContent();
     console.log(`First product title: ${productTitle}`);
+
+    expect(productTitle).toContain("Book");
 });
